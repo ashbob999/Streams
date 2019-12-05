@@ -4,7 +4,7 @@ from typing import Generic, TypeVar, Iterable
 T = TypeVar("T")
 
 
-class Stream(Generic[T]):
+class ParallelStream(Generic[T]):
     def __init__(self, *iterables: Iterable[T]) -> None:
         self.iterable = itertools.chain(*iterables)
 
